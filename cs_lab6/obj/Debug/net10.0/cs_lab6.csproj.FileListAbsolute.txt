@@ -1,0 +1,16 @@
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\bin\Debug\net10.0\cs_lab6.exe
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\bin\Debug\net10.0\cs_lab6.deps.json
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\bin\Debug\net10.0\cs_lab6.runtimeconfig.json
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\bin\Debug\net10.0\cs_lab6.dll
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\bin\Debug\net10.0\cs_lab6.pdb
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\obj\Debug\net10.0\cs_lab6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\obj\Debug\net10.0\cs_lab6.AssemblyInfoInputs.cache
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\obj\Debug\net10.0\cs_lab6.AssemblyInfo.cs
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\obj\Debug\net10.0\cs_lab6.csproj.CoreCompileInputs.cache
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\obj\Debug\net10.0\cs_lab6.dll
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\obj\Debug\net10.0\refint\cs_lab6.dll
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\obj\Debug\net10.0\cs_lab6.pdb
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\obj\Debug\net10.0\cs_lab6.genruntimeconfig.cache
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\obj\Debug\net10.0\ref\cs_lab6.dll
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\bin\Debug\net10.0\cs_lab6.xml
+C:\Users\glaznyxa\Documents\cs_labs\cs_lab6\obj\Debug\net10.0\cs_lab6.xml

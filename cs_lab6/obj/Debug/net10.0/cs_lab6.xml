@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>cs_lab6</name>
+    </assembly>
+    <members>
+        <member name="T:CachedFraction">
+            <summary>
+            Декоратор для дроби с кэшированием вещественного значения
+            </summary>
+        </member>
+        <member name="M:CachedFraction.#ctor(IFractionOperations)">
+            <summary>
+            Конструктор декоратора с кэшированием
+            </summary>
+            <param name="fraction">Исходная дробь</param>
+        </member>
+        <member name="M:CachedFraction.GetRealValue">
+            <summary>
+            Получает вещественное значение дроби с кэшированием
+            </summary>
+            <returns>Вещественное значение дроби</returns>
+        </member>
+        <member name="M:CachedFraction.SetNumerator(System.Int32)">
+            <summary>
+            Устанавливает числитель дроби (инвалидирует кэш)
+            </summary>
+            <param name="numerator">Новый числитель</param>
+        </member>
+        <member name="M:CachedFraction.SetDenominator(System.Int32)">
+            <summary>
+            Устанавливает знаменатель дроби (инвалидирует кэш)
+            </summary>
+            <param name="denominator">Новый знаменатель</param>
+        </member>
+        <member name="M:CachedFraction.ToString">
+            <summary>
+            Получает строковое представление дроби
+            </summary>
+            <returns>Строковое представление</returns>
+        </member>
+        <member name="T:Cat">
+            <summary>
+            Класс, представляющий кота
+            </summary>
+        </member>
+        <member name="P:Cat.Name">
+            <summary>
+            Имя кота (только для чтения)
+            </summary>
+        </member>
+        <member name="M:Cat.#ctor(System.String)">
+            <summary>
+            Конструктор для создания кота
+            </summary>
+            <param name="name">Имя кота</param>
+            <exception cref="T:System.ArgumentException">Выбрасывается, если имя null или пустое</exception>
+        </member>
+        <member name="M:Cat.ToString">
+            <summary>
+            Возвращает строковое представление кота
+            </summary>
+            <returns>Строка в формате "кот: Имя"</returns>
+        </member>
+        <member name="M:Cat.Meow">
+            <summary>
+            Кот мяукает один раз
+            </summary>
+        </member>
+        <member name="M:Cat.Meow(System.Int32)">
+            <summary>
+            Кот мяукает указанное количество раз
+            </summary>
+            <param name="count">Количество мяуканий</param>
+            <exception cref="T:System.ArgumentException">Выбрасывается, если count меньше или равен 0</exception>
+        </member>
+        <member name="T:CatWithCounter">
+            <summary>
+            Декоратор для кота, который подсчитывает количество мяуканий
+            </summary>
+            <remarks>
+            Использует паттерн "Декоратор" для добавления новой функциональности
+            (подсчета мяуканий) без изменения исходного класса Cat.
+            </remarks>
+        </member>
+        <member name="P:CatWithCounter.OriginalCat">
+            <summary>
+            Исходный кот (только для чтения)
+            </summary>
+        </member>
+        <member name="P:CatWithCounter.MeowCount">
+            <summary>
+            Количество выполненных мяуканий
+            </summary>
+        </member>
+        <member name="M:CatWithCounter.#ctor(Cat)">
+            <summary>
+            Конструктор декоратора
+            </summary>
+            <param name="cat">Кот, для которого нужно подсчитывать мяукания</param>
+            <exception cref="T:System.ArgumentNullException">Выбрасывается, если кот равен null</exception>
+        </member>
+        <member name="M:CatWithCounter.Meow">
+            <summary>
+            Мяукает и увеличивает счетчик
+            </summary>
+        </member>
+        <member name="M:CatWithCounter.ToString">
+            <summary>
+            Возвращает строковое представление декоратора
+            </summary>
+            <returns>Строка с информацией о декорированном коте</returns>
+        </member>
+        <member name="T:Fraction">
+            <summary>
+            Класс, представляющий дробь
+            </summary>
+        </member>
+        <member name="P:Fraction.Numerator">
+            <summary>
+            Числитель дроби
+            </summary>
+        </member>
+        <member name="P:Fraction.Denominator">
+            <summary>
+            Знаменатель дроби
+            </summary>
+        </member>
+        <member name="M:Fraction.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Конструктор дроби
+            </summary>
+            <param name="numerator">Числитель</param>
+            <param name="denominator">Знаменатель</param>
+        </member>
+        <member name="M:Fraction.Normalize">
+            <summary>
+            Нормализует дробь (сокращает)
+            </summary>
+        </member>
+        <member name="M:Fraction.GetGreatestCommonDivisor(System.Int32,System.Int32)">
+            <summary>
+            Вычисляет наибольший общий делитель
+            </summary>
+            <param name="a">Первое число</param>
+            <param name="b">Второе число</param>
+            <returns>НОД</returns>
+        </member>
+        <member name="M:Fraction.ToString">
+            <summary>
+            Получает строковое представление дроби
+            </summary>
+            <returns>Строковое представление</returns>
+        </member>
+        <member name="M:Fraction.Add(Fraction)">
+            <summary>
+            Сложение двух дробей
+            </summary>
+            <param name="other">Вторая дробь</param>
+            <returns>Новая дробь - результат сложения</returns>
+        </member>
+        <member name="M:Fraction.Add(System.Int32)">
+            <summary>
+            Сложение дроби с целым числом
+            </summary>
+            <param name="number">Целое число</param>
+            <returns>Новая дробь - результат сложения</returns>
+        </member>
+        <member name="M:Fraction.Subtract(Fraction)">
+            <summary>
+            Вычитание дробей
+            </summary>
+            <param name="other">Вторая дробь</param>
+            <returns>Новая дробь - результат вычитания</returns>
+        </member>
+        <member name="M:Fraction.Subtract(System.Int32)">
+            <summary>
+            Вычитание целого числа из дроби
+            </summary>
+            <param name="number">Целое число</param>
+            <returns>Новая дробь - результат вычитания</returns>
+        </member>
+        <member name="M:Fraction.Multiply(Fraction)">
+            <summary>
+            Умножение дробей
+            </summary>
+            <param name="other">Вторая дробь</param>
+            <returns>Новая дробь - результат умножения</returns>
+        </member>
+        <member name="M:Fraction.Multiply(System.Int32)">
+            <summary>
+            Умножение дроби на целое число
+            </summary>
+            <param name="number">Целое число</param>
+            <returns>Новая дробь - результат умножения</returns>
+        </member>
+        <member name="M:Fraction.Divide(Fraction)">
+            <summary>
+            Деление дробей
+            </summary>
+            <param name="other">Вторая дробь</param>
+            <returns>Новая дробь - результат деления</returns>
+        </member>
+        <member name="M:Fraction.Divide(System.Int32)">
+            <summary>
+            Деление дроби на целое число
+            </summary>
+            <param name="number">Целое число</param>
+            <returns>Новая дробь - результат деления</returns>
+        </member>
+        <member name="M:Fraction.op_Addition(Fraction,Fraction)">
+            <summary>
+            Перегрузка оператора сложения для двух дробей
+            </summary>
+        </member>
+        <member name="M:Fraction.op_Addition(Fraction,System.Int32)">
+            <summary>
+            Перегрузка оператора сложения для дроби и целого числа
+            </summary>
+        </member>
+        <member name="M:Fraction.op_Addition(System.Int32,Fraction)">
+            <summary>
+            Перегрузка оператора сложения для целого числа и дроби
+            </summary>
+        </member>
+        <member name="M:Fraction.op_Subtraction(Fraction,Fraction)">
+            <summary>
+            Перегрузка оператора вычитания для двух дробей
+            </summary>
+        </member>
+        <member name="M:Fraction.op_Subtraction(Fraction,System.Int32)">
+            <summary>
+            Перегрузка оператора вычитания для дроби и целого числа
+            </summary>
+        </member>
+        <member name="M:Fraction.op_Multiply(Fraction,Fraction)">
+            <summary>
+            Перегрузка оператора умножения для двух дробей
+            </summary>
+        </member>
+        <member name="M:Fraction.op_Multiply(Fraction,System.Int32)">
+            <summary>
+            Перегрузка оператора умножения для дроби и целого числа
+            </summary>
+        </member>
+        <member name="M:Fraction.op_Multiply(System.Int32,Fraction)">
+            <summary>
+            Перегрузка оператора умножения для целого числа и дроби
+            </summary>
+        </member>
+        <member name="M:Fraction.op_Division(Fraction,Fraction)">
+            <summary>
+            Перегрузка оператора деления для двух дробей
+            </summary>
+        </member>
+        <member name="M:Fraction.op_Division(Fraction,System.Int32)">
+            <summary>
+            Перегрузка оператора деления для дроби и целого числа
+            </summary>
+        </member>
+        <member name="M:Fraction.Clone">
+            <summary>
+            Создает копию объекта дроби
+            </summary>
+            <returns>Новый объект дроби с теми же значениями</returns>
+        </member>
+        <member name="M:Fraction.GetRealValue">
+            <summary>
+            Получает вещественное значение дроби
+            </summary>
+            <returns>Вещественное значение дроби</returns>
+        </member>
+        <member name="M:Fraction.SetNumerator(System.Int32)">
+            <summary>
+            Устанавливает числитель дроби
+            </summary>
+            <param name="numerator">Новый числитель</param>
+        </member>
+        <member name="M:Fraction.SetDenominator(System.Int32)">
+            <summary>
+            Устанавливает знаменатель дроби
+            </summary>
+            <param name="denominator">Новый знаменатель</param>
+        </member>
+        <member name="M:Fraction.Equals(Fraction)">
+            <summary>
+            Проверяет равенство двух дробей по состоянию
+            </summary>
+            <param name="other">Другая дробь</param>
+            <returns>true, если дроби равны</returns>
+        </member>
+        <member name="M:Fraction.Equals(System.Object)">
+            <summary>
+            Проверяет равенство объектов
+            </summary>
+            <param name="obj">Объект для сравнения</param>
+            <returns>true, если объекты равны</returns>
+        </member>
+        <member name="M:Fraction.GetHashCode">
+            <summary>
+            Получает хэш-код объекта
+            </summary>
+            <returns>Хэш-код</returns>
+        </member>
+        <member name="T:IFractionOperations">
+            <summary>
+            Интерфейс для работы с дробью
+            </summary>
+        </member>
+        <member name="M:IFractionOperations.GetRealValue">
+            <summary>
+            Получает вещественное значение дроби
+            </summary>
+            <returns>Вещественное значение дроби</returns>
+        </member>
+        <member name="M:IFractionOperations.SetNumerator(System.Int32)">
+            <summary>
+            Устанавливает числитель дроби
+            </summary>
+            <param name="numerator">Новый числитель</param>
+        </member>
+        <member name="M:IFractionOperations.SetDenominator(System.Int32)">
+            <summary>
+            Устанавливает знаменатель дроби
+            </summary>
+            <param name="denominator">Новый знаменатель</param>
+        </member>
+        <member name="T:IMeowable">
+            <summary>
+            Интерфейс для объектов, которые могут мяукать
+            </summary>
+        </member>
+        <member name="M:IMeowable.Meow">
+            <summary>
+            Издать мяукающий звук
+            </summary>
+        </member>
+        <member name="T:MeowHelper">
+            <summary>
+            Вспомогательный класс для работы с мяукающими объектами
+            </summary>
+        </member>
+        <member name="T:MeowHelper.MeowingCompletedHandler">
+            <summary>
+            Делегат для события завершения мяуканья
+            </summary>
+            <param name="meowCount">Общее количество выполненных мяуканий</param>
+        </member>
+        <member name="E:MeowHelper.MeowingCompleted">
+            <summary>
+            Событие, возникающее после завершения всех мяуканий
+            </summary>
+        </member>
+        <member name="M:MeowHelper.MakeAllMeow(System.Collections.Generic.IEnumerable{IMeowable})">
+            <summary>
+            Вызывает мяуканье у каждого объекта в коллекции
+            </summary>
+            <param name="meowingObjects">Коллекция объектов, способных мяукать</param>
+            <exception cref="T:System.ArgumentNullException">Выбрасывается, если коллекция null</exception>
+        </member>
+        <member name="M:MeowHelper.OnMeowingCompleted(System.Int32)">
+            <summary>
+            Вызывает событие MeowingCompleted
+            </summary>
+            <param name="meowCount">Количество выполненных мяуканий</param>
+        </member>
+        <member name="T:MeowingObject">
+            <summary>
+            Другой объект, который умеет мяукать (для демонстрации полиморфизма)
+            </summary>
+        </member>
+        <member name="M:MeowingObject.#ctor(System.String)">
+            <summary>
+            Конструктор для создания другого мяукающего объекта
+            </summary>
+            <param name="name">Название объекта</param>
+            <exception cref="T:System.ArgumentException">Выбрасывается, если имя null или пустое</exception>
+        </member>
+        <member name="M:MeowingObject.Meow">
+            <summary>
+            Объект издает мяукающий звук
+            </summary>
+        </member>
+        <member name="M:MeowingObject.ToString">
+            <summary>
+            Возвращает строковое представление объекта
+            </summary>
+            <returns>Строка с названием объекта</returns>
+        </member>
+        <member name="T:Program">
+            <summary>
+            Основной класс программы
+            </summary>
+        </member>
+        <member name="M:Program.Main">
+            <summary>
+            Точка входа в программу
+            </summary>
+        </member>
+    </members>
+</doc>
